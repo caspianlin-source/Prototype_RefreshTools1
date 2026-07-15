@@ -1,0 +1,44 @@
+.internal-locale-toggle {
+  position: fixed;
+  top: 76px;
+  right: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .94);
+  color: #111827;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, .13);
+  font: 700 13px/1.2 Inter, "Noto Sans SC", "Noto Sans JP", system-ui, sans-serif;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+
+.internal-locale-toggle::before {
+  content: "INTERNAL";
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.internal-locale-toggle:hover {
+  border-color: #6c4cff;
+  transform: translateY(-1px);
+}
+
+.internal-zh .internal-locale-toggle {
+  border-color: rgba(108, 76, 255, .35);
+  background: rgba(247, 245, 255, .96);
+  color: #5b3be8;
+}
+
+@media (max-width: 900px) {
+  .internal-locale-toggle { top: 70px; right: 12px; }
+}
